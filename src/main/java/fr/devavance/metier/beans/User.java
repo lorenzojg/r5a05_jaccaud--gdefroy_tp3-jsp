@@ -18,6 +18,8 @@ public class User implements Serializable {
     
     public String getUserName(){return this.userName;}
     
+    public String getPassword(){return this.password;}
+    
     public void setUserName(String n_userName){this.userName = n_userName;}
     
     
