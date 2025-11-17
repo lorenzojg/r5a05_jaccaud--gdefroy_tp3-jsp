@@ -11,11 +11,6 @@
 
 <jsp:useBean id="user" scope="request" class="fr.devavance.metier.beans.User" />
 
-<jsp:setProperty name="user" property="username" value="toto" />
-<jsp:setProperty name="user" property="password" value="Jsasdsq124!" />
-<jsp:setProperty name="user" property="profil" value="admin" />
-<jsp:setProperty name="user" property="auth" value="true" />
-
 
 <!DOCTYPE html>
 <html>

@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+import fr.devavance.metier.beans.User;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +23,15 @@ public class InfosUserServlet extends HttpServlet {
     public final static String KEY_PASSWORD = "password";
     public final static String KEY_AUTH = "auth";
     
+    
+    private User createNewUser(){
+        User newUser = new User();
+        newUser.setUsername("alan");
+        newUser.setProfil("admin");
+        newUser.setPassword("mp2023t");
+        
+        return newUser;
+    }
 
     
     
@@ -37,8 +47,9 @@ public class InfosUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
-      
+        
+        request.setAttribute(KEY_USER, createNewUser());
+        request.getRequestDispatcher("infos_user.jsp").forward(request,response);
     
     }
 
