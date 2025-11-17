@@ -7,8 +7,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
-
 <%-- Déclaration des des beans qui sont utilisés --%>
+
+<jsp:useBean id="user" scope="request" class="fr.devavance.metier.beans.User" />
+
+<jsp:setProperty name="user" property="username" value="toto" />
+<jsp:setProperty name="user" property="password" value="Jsasdsq124!" />
+<jsp:setProperty name="user" property="profil" value="admin" />
+<jsp:setProperty name="user" property="auth" value="true" />
+
 
 <!DOCTYPE html>
 <html>
@@ -18,11 +25,17 @@
     </head>
     <body>
         
+        <div class="credentials">
+            <p><b>Nom d'utilisateur</b> : <jsp:getProperty name="user" property="username" /></p>
+            <p><b>Mot de passe</b> : <jsp:getProperty name="user" property="password" /></p>
+        </div>
+        
         <div class="info_user">
+            <p><b>Profil </b> : <jsp:getProperty name="user" property="profil" /></p>
+            <p><b>Authentification</b> : <jsp:getProperty name="user" property="auth" /></p>
         </div>
      
-        <div class="credentials">
-        </div>
+
         
     </body>
 </html>
