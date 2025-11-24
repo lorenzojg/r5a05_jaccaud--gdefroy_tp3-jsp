@@ -1,0 +1,5 @@
+# username,profil,password,auth
+farida,admin,pass1,true
+paul,user,pass2,false
+amina,admin,pass1,false
+karim,user,pass1,false
